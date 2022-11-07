@@ -27,6 +27,8 @@
 
 * [Entidades y atributos](#entidades-y-atributos)
 
+* [Relaciones](#relaciones)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -101,4 +103,28 @@ Los atributos llave son aquellos que identifican a la entidad y no pueden ser re
 
 * Naturales: Son inherentes al objeto como el número de serie
 * Clave artificial: No es inherente al objeto y se asigna de manera arbitraria
+
+# Relaciones
+
+Las relaciones nos permiten ligar o unir nuestras diferentes entidades y se representan con rombos. Por convención se definen a través de verbos.
+
+Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con números. Cuántos de un lado pertenecen a cuántos del otro lado:
+
+* Cardinalidad: 1 a 1 
+
+![cardinalidad](https://user-images.githubusercontent.com/87950040/200440474-78e62912-3032-49cb-a5b6-69a8206597fe.JPG)
+
+* Cardinalidad: 0 a 1 
+
+![cardinalidad](https://user-images.githubusercontent.com/87950040/200440608-c5d433e4-f008-4628-a8eb-6578f20547be.JPG)
+
+* Cardinalidad: 1 a N 
+
+![cardinalidad](https://user-images.githubusercontent.com/87950040/200440725-287fe43c-1ed6-49c2-9ca3-1f1fd1652066.JPG)
+
+* Cardinalidad: 0 a N
+
+![cardinalidad](https://user-images.githubusercontent.com/87950040/200440858-0add4255-d6a9-479f-9834-7af54c25fdf5.JPG)
+
+
 
