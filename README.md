@@ -25,6 +25,8 @@
 
 * [Historia de las RDB (relational data bases)](#historia-de-las-rdb)
 
+* [Entidades y atributos](#entidades-y-atributos)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -79,3 +81,24 @@ Es importante que sea fácil de guardar y extraer, anteriormente se usaban bases
 **Regla 11**: Independencia de la distribución. a) Que la base de datos se almacene o gestione de forma distribuida en varios servidores, no afecta al uso de esta ni a la programación de las aplicaciones de usuario b) El esquema lógico es el mismo independientemente de si la BD es distribuida o no
 
 **Regla 12**: La regla de la no subversión. a) La base de datos no permitirá que exista un lenguaje o forma de acceso, que permita saltarse las reglas anteriores.
+
+# Entidades y atributos
+
+Una **entidad** es algo similar a un objeto (programación orientada a objetos) y representa algo en el mundo real, incluso algo abstracto. Tienen atributos que son las cosas que los hacen ser una entidad, se diagraman dentro de cuadrados y por convención se ponen en plural.
+
+Entidad Fuerte: No depende de ninguna entidad para existir
+
+Entidades débiles: No pueden existir sin una entidad fuerte y se representan con un cuadrado con doble línea.
+
+* Identidades débiles por identidad: No se diferencian entre sí más que por la clave de su identidad fuerte.
+* Identidades débiles por existencia: Se les asigna una clave propia.
+
+Los **atributos** se representan con óvalos, los que tienen multiples valores llevan dobles óvalos, también existen atributos compuestos, los atributos especiales son óvalos con linea punteada.
+
+Los atributos compuestos son aquellos que tienen atributos ellos mismos.
+
+Los atributos llave son aquellos que identifican a la entidad y no pueden ser repetidos, se diagraman con underline. Existen:
+
+* Naturales: Son inherentes al objeto como el número de serie
+* Clave artificial: No es inherente al objeto y se asigna de manera arbitraria
+
