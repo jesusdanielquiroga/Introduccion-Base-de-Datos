@@ -9,8 +9,10 @@
    <img src="https://img.shields.io/badge/topic-basededatos-green">
   </p>
 
- <h1 align="left"> Introducción Base de Datos </h1>
- 
+ ![Banner de LinkedIn Trabajo Sencillo](https://user-images.githubusercontent.com/87950040/200203775-86f6257d-7eaf-4ad9-b5c2-2a818581ac18.png)
+
+  <h1 align="left"> Introducción Base de Datos </h1>
+  
  Repositorio de formación sobre base de datos
  
  ## Índice
