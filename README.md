@@ -230,11 +230,9 @@ SQL significa Structured Query Language y tiene una estructura clara y fija. Su 
 
 Ahora existe el NOSQL o Not Only Structured Query Language que significa que no sólo se utiliza SQLen las bases de datos no relacionales.
 
-SQL tiene dos grandes sublenguajes DDL y DML
+SQL tiene dos grandes sublenguajes DDL y DML.
 
 ## DDL
-
-SQL tiene dos grandes sublenguajes:
 
 DDL o Data Definition Language que nos ayuda a crear la estructura de una base de datos. Existen 3 grandes comandos:
 
