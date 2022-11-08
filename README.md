@@ -33,6 +33,8 @@
 
 * [Tipos de datos y constraints](#tipos-de-datos-y-constraints)
 
+* [Normalización](#normalización)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -162,4 +164,61 @@ Char(8) reserva 8 espacios en memoria de forma fija, Varchar(8) hace lo mismo pe
 * CHECK: Se asegura que el valor en la columna cumpla una condición dada
 * DEFAULT: Coloca un valor por defecto cuando no hay un valor especificado
 * INDEX: Se crea por columna para permitir búsquedas más rápidas, tiene la desventaja de que tiene que reindexar los registros cada vez, lo que vuelve muy lenta la operación de la bd.
+
+# Normalización
+
+La normalización como su nombre lo indica nos ayuda a dejar todo de una forma normal. Esto obedece a las 12 reglas de Codd y nos permiten separar componentes en la base de datos:
+
+**Primera Forma Normal (1FN)**
+
+Esta FN nos ayuda a eliminar los valores repetidos y no atómicos dentro de una base de datos.
+
+Formalmente, una tabla está en primera forma normal si:
+
+* Todos los atributos son atómicos. Un atributo es atómico si los elementos del dominio son simples e indivisibles.
+* No debe existir variación en el número de columnas.
+* Los campos no clave deben identificarse por la clave (dependencia funcional).
+* Debe existir una independencia del orden tanto de las filas como de las columnas; es decir, si los datos cambian de orden no deben cambiar sus significados.
+* Se traduce básicamente a que si tenemos campos compuestos como por ejemplo “nombre_completo” que en realidad contiene varios datos distintos, en este caso podría ser “nombre”, “apellido_paterno”, “apellido_materno”, etc.
+
+Se traduce básicamente a que si tenemos campos compuestos como por ejemplo “nombre_completo” que en realidad contiene varios datos distintos, en este caso podría ser “nombre”, “apellido_paterno”, “apellido_materno”, etc.
+
+Los campos deben ser tales que si reordenamos los registros o reordenamos las columnas, cada dato no pierda el significado.
+
+**Segunda Forma Normal (2FN)**
+
+Esta FN nos ayuda a diferenciar los datos en diversas entidades.
+
+Formalmente, una tabla está en segunda forma normal si:
+
+* Está en 1FN
+* Sí los atributos que no forman parte de ninguna clave dependen de forma completa de la clave principal. Es decir, que no existen dependencias parciales.
+* Todos los atributos que no son clave principal deben depender únicamente de la clave principal.
+
+Lo anterior quiere decir que sí tenemos datos que pertenecen a diversas entidades, cada entidad debe tener un campo clave separado.
+
+**Tercera Forma Normal (3FN)**
+
+Esta FN nos ayuda a separar conceptualmente las entidades que no son dependientes.
+
+Formalmente, una tabla está en tercera forma normal si:
+
+Se encuentra en 2FN No existe ninguna dependencia funcional transitiva en los atributos que no son clave
+
+Esta FN se traduce en que aquellos datos que no pertenecen a la entidad deben tener una independencia de las demás y debe tener un campo clave propio. 
+
+**Cuarta Forma Normal (4FN)**
+
+Esta FN nos trata de atomizar los datos multivaluados de manera que no tengamos datos repetidos entre rows.
+
+Formalmente, una tabla está en cuarta forma normal si:
+
+* Se encuentra en 3FN
+* Los campos multivaluados se identifican por una clave única
+
+Esta FN trata de eliminar registros duplicados en una entidad, es decir que cada registro tenga un contenido único y de necesitar repetir la data en los resultados se realiza a través de claves foráneas.
+
+De esta manera, aunque parezca que la información se multiplicó, en realidad la descompusimos o normalizamos de manera que a un sistema le sea fácil de reconocer y mantener la consistencia de los datos.
+
+Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
 
