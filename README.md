@@ -35,6 +35,8 @@
 
 * [Normalización](#normalización)
 
+* [SQL](#sql)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -222,3 +224,28 @@ De esta manera, aunque parezca que la información se multiplicó, en realidad l
 
 Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
 
+# SQL
+
+SQL significa Structured Query Language y tiene una estructura clara y fija. Su objetivo es hacer un solo lenguaje para consultar cualquier manejador de bases de datos volviéndose un gran estándar.
+
+Ahora existe el NOSQL o Not Only Structured Query Language que significa que no sólo se utiliza SQLen las bases de datos no relacionales.
+
+SQL tiene dos grandes sublenguajes DDL y DML
+
+## DDL
+
+SQL tiene dos grandes sublenguajes:
+
+DDL o Data Definition Language que nos ayuda a crear la estructura de una base de datos. Existen 3 grandes comandos:
+
+* Create: Nos ayuda a crear bases de datos, tablas, vistas, índices, etc.
+
+* Alter: Ayuda a alterar o modificar entidades.
+
+* Drop: Nos ayuda a borrar. Hay que tener cuidado al utilizarlo.
+
+3 objetos que manipularemos con el lenguaje DDL:
+
+Database o bases de datos
+Table o tablas. Son la traducción a SQL de las entidades
+View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
