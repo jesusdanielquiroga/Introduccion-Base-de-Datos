@@ -29,6 +29,10 @@
 
 * [Relaciones](#relaciones)
 
+* [Diagrama Entidad Relación](#diagrama-entidad-relación)
+
+* [Tipos de datos y constraints](#tipos-de-datos-y-constraints)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -126,5 +130,36 @@ Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con nú
 
 ![cardinalidad](https://user-images.githubusercontent.com/87950040/200440858-0add4255-d6a9-479f-9834-7af54c25fdf5.JPG)
 
+# Diagrama Entidad Relación
 
+Un diagrama es como un mapa y nos ayuda a entender cuáles son las entidades con las que vamos a trabajar, cuáles son sus relaciones y qué papel van a jugar en las aplicaciones de la base de datos.
+
+![cardinalidad](https://user-images.githubusercontent.com/87950040/200441668-055de8f8-e1d1-4df0-ab76-70b2c0f3d414.JPG)
+
+# Tipos de datos y constraints
+
+**Tipos de dato**
+
+* Texto:
+CHAR(n), VARCHAR(n), TEXT 
+
+* Números:
+INTEGER, BIGINT, SMALLINT, DECIMAL(n,s), NUMERIC(n,s)
+
+* Fecha/hora:
+DATE, TIME, DATETIME, TIMESTAMP
+
+* Lógicos: 
+BOOLEAN
+
+**Nota:**
+Char(8) reserva 8 espacios en memoria de forma fija, Varchar(8) hace lo mismo pero crece (1,2,3...8) de manera dinámica conforme los requieres y tiene un limite general de 255 caracteres.
+
+**Constraints (Restricciones)**
+
+* NOT NULL: Se asegura que la columna no tenga valores nulos - UNIQUE: Se asegura que cada valor en la columna no se repita
+* PRIMARY KEY: Es una combinación de NOT NULL y UNIQUE - FOREIGN KEY: Identifica de manera única una tupla en otra tabla
+* CHECK: Se asegura que el valor en la columna cumpla una condición dada
+* DEFAULT: Coloca un valor por defecto cuando no hay un valor especificado
+* INDEX: Se crea por columna para permitir búsquedas más rápidas, tiene la desventaja de que tiene que reindexar los registros cada vez, lo que vuelve muy lenta la operación de la bd.
 
