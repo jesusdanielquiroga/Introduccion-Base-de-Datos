@@ -247,3 +247,57 @@ DDL o Data Definition Language que nos ayuda a crear la estructura de una base d
 * Database o bases de datos
 * Table o tablas: Son la traducción a SQL de las entidades
 * View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
+
+**CREATE**
+
+```sh
+
+CREATE DATABASE tiendas_aby;
+USE DATABASE tiendas_aby;
+
+------------------------------------------------
+
+CREATE TABLE people (
+	person_id int,
+	last_name varchar(255),
+	first_name varchar(255),
+	address varchar(255),
+	city varchar(255) 
+);
+
+------------------------------------------------
+
+CREATE VIEW v_brasil_customers AS
+    SELECT customer_name, contact_name
+    FROM customers
+    WHERE country = "Brasil";
+    
+```
+
+**ALTER**
+
+```sh
+
+ALTER TABLE people
+ADD date_of_birth date;
+
+------------------------------------------------
+
+ALTER TABLE people
+ALTER COLUMN date_of_birth year;
+
+------------------------------------------------
+
+ALTER TABLE people
+DROP COLUMN date_of_birth;
+    
+```
+
+**DROP**
+
+```sh
+
+DROP TABLE people
+DROP DATABASE tiendas_aby;
+  
+```
