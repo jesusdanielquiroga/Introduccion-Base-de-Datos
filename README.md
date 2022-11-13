@@ -422,3 +422,39 @@ WHERE	fecha_publicacion > '2024-00-00 00:00:00';
 ```SH
 (*) Indica dentro de la consulta que vamos a seleccionar todo sin filtrar campos
 ```
+## SELECT
+
+Es la primera parte de la estructura que necesitamos para hacer preguntas a la base de datos. Se encarga de proyectar o mostrar los datos que le pedimos a la base de datos.
+```sh
+SELECT	*
+FROM	posts;
+```
+Si escribimos "SELECT " y luego uno o varios nombres de los campos de la tabla, separados por coma, unicamente recibiremos dichos los datos de dichas columnas.
+```sh
+SELECT	titulo, fecha_publicacion, estatus
+FROM   posts;
+```
+Por cada campo, podemos agregar un “_AS _ …” (por ejemplo, " titulo AS encabezado ). Esto nos permitira mostrar las columnas con un nombre diferente: en este caso mostrara la columna titulo con el nombre encabezado.
+
+```sh
+SELECT	titulo AS encabezado, 
+fecha_publicacion AS publicado, 
+estatus AS estado
+FROM 	posts;
+```
+También puedes generar encabezados con espacios encerrando el nombre entre apostrofes, por ejemplo:
+```sh
+SELECT titulo AS encabezado,
+fecha_publicacion AS 'publicado en’,
+estatus AS estado
+FROM 	posts;
+```
+
+Si indicamos " SELECT COUNT (*)", la funcion COUNT contara todas las filas de la tabla (usualmente se usa con algun filtro, para no elegir todas las columnas de la tabla).
+```sh
+SELECT	count(*)
+FROM		posts;
+--------------------------------------------------
+SELECT	count(*) AS numero_posts
+FROM		posts;
+```
