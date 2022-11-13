@@ -37,6 +37,8 @@
 
 * [SQL](#sql)
 
+* [Tablas](#tablas)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -332,4 +334,52 @@ DELETE FROM people;
 -- Select
 SELECT fist_name, last_name FROM people;
 ```
+
+# Tablas
+
+## Tablas Independientes
+
+Son entidades que no tienen una llave foránea, es una buena práctica comenzar la BD por ellas. 
+
+## Tablas Dependientes
+
+Son entidades que dependen de otra o estan relacionadas con una llave foránea:
+
+```sh
+ALTER TABLE `platziblog`.`posts` 
+ADD INDEX `post_usuarios_idx` (`usuario_id` ASC) ;
+
+ALTER TABLE `platziblog`.`posts` 
+ADD CONSTRAINT `post_usuarios`
+  FOREIGN KEY (`usuario_id`)
+  REFERENCES `platziblog`.`usuarios` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+```
+Una llave foránea se crea en la pestaña foreing key. Las Foreing Key options son las siguientes:
+
+* **On update**: Significa qué pasará con las relaciones cuando una de estas sea modificada en sus campos relacionados, Por ejemplo, pueden utilizarse los valores:
+cascade: Si el id de un usuario pasa de 11 a 12, entonces la relacion se actualizará y el post buscará el id nuevo en lugar de quedarse sin usuario.
+* **_restrict**: Si el id de un usuario pasa de 11 a 12, no lo permitirá hasta que no sean actualizados antes todos los post relacionados.
+set null Si el id de un usuario pasa de 11 a 12, entonces los post solo no estará relacionados con nada.
+no action: Si el id de un usuario pasa de 11 a 12, no se hará nada. Solo se romperá la relación.
+* **cascade**: Si un usuario es eliminado entonces se borrarán todos los post relacionados.
+* **set null**: Si un usuario es eliminado, entonces los post solo no estará relacionados con nada.
+no action: Si un usuario es eliminado, no se hará nada. Solo se romperá la relación.
+
+## Tablas Transitivas
+
+Sirven como puente para unir dos tablas. Estas no contiene contenido semantico. 
+
+## Reverse Engineer 
+
+Es una herramienta que nos permite generar el esquema del cual nos basamos para crear nuestras tablas. Es muy útil para conocer como se creo una base de datos.
+
+<img width="485" alt="engineer rev" src="https://user-images.githubusercontent.com/87950040/201502367-cd5998b3-5575-4937-b9a4-c5a9ec6801ed.png">
+
+Genera el modelo DB: 
+
+<img width="473" alt="engineer model" src="https://user-images.githubusercontent.com/87950040/201502447-072dd88b-4a10-45b0-8c18-81897e9a066f.png">
+
+
 
