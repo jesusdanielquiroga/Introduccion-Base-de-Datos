@@ -245,5 +245,5 @@ DDL o Data Definition Language que nos ayuda a crear la estructura de una base d
 3 objetos que manipularemos con el lenguaje DDL:
 
 * Database o bases de datos
-*Table o tablas: Son la traducción a SQL de las entidades
-*View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
+* Table o tablas: Son la traducción a SQL de las entidades
+* View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
