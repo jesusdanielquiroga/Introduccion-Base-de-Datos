@@ -39,6 +39,10 @@
 
 * [Tablas](#tablas)
 
+* [Importancia de las consultas](#importancia-de-las-consultas)
+
+* [Estructura básica de un query](#estructura-básica-de-un-query)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -382,4 +386,39 @@ Genera el modelo DB:
 <img width="473" alt="engineer model" src="https://user-images.githubusercontent.com/87950040/201502447-072dd88b-4a10-45b0-8c18-81897e9a066f.png">
 
 
+# Importancia de las consultas
 
+Las consultas en una base de datos juegan un papel muy fundamental, puesto que facilitan de manera considerable los procesos en cualquier empresa.
+## ETL
+La palabra ETL correspondería al acrónimo de:
+* Extract (Extraer)
+* Transform (Transformar)
+* Load (Cargar)
+
+ETL hace parte del proceso de integración de datos, mas aun es un componente muy importante que completa el resultado final en la relación de aplicaciones y sistemas.
+
+# Estructura básica de un query
+
+Los query son la forma en la que se estructura las preguntas que se hacen a la base de datos. Transforma preguntas en sintaxis. Los query básicamente tienen dos partes **SELECT** y **FROM**.
+
+* **SELECT**: que datos queremos obtener (que columnas/campos de la tabla).
+* **FROM** : de donde los queremos obtener (de que tabla, por ejemplo).
+* **WHERE** : condicion que deben cumplir o filtro que deben pasar los datos a obtener. Es opcional, pero se suele utilizar, ya que sino se obtienen todos los datos sin filtrar ninguno.
+* 
+Otras sentencias:
+* **GROUP BY** : de que manera agrupamos los datos (en este caso agrupa por ciudad).
+* **ORDER BY** : de que manera ordenamos los datos (en este caso, por poblacion).
+* **HAVING** : otra manera de filtrar los datos.
+```SH
+-- Estructura basica de un query
+SELECT	*
+FROM		posts;
+
+-- Estructura extendida de un query
+SELECT	*
+FROM		posts
+WHERE	fecha_publicacion > '2024-00-00 00:00:00';
+```
+```SH
+(*) Indica dentro de la consulta que vamos a seleccionar todo sin filtrar campos
+```
