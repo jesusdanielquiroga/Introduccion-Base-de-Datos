@@ -458,3 +458,27 @@ FROM		posts;
 SELECT	count(*) AS numero_posts
 FROM		posts;
 ```
+## FROM
+
+Indica de dónde se deben traer los datos y puede ayudar a hacer sentencias y filtros complejos cuando se quieren unir tablas. La sentencia compañera que nos ayuda con este proceso es **JOIN**.
+
+## JOIN
+
+Esta sentencia esta relacionada con la Teoría de Conjuntos, donde se utilizan los **diagramas de Venn**, que son círculos que se tocan en algún punto para ver dónde está la intersección de conjuntos. Ayudan mucho para poder formular la sentencia JOIN de la manera adecuada dependiendo del query que se quiere hacer.
+
+![sqljoin](https://user-images.githubusercontent.com/87950040/201504653-4d977c91-c5ef-4d01-ae9e-f0366444b4a6.jpeg)
+
+
+1. Diferencia:
+* LEFT Join (Con la intersección): Trae todo los datos de la tabla A, que estén o no estén de la tabla B.
+* LEFT JOIN (Sin la intersección): Trae todo los datos de la tabla A, que no estén en la tabla B.
+* RRIGHT JOIN(Con la intersección): Trae todo los datos de la tabla B, que estén o no estén de la tabla A.
+* RIGHT JOIN(Sin la intersección):Trae todo los datos de la tabla B, que no estén en la tabla A.
+
+2. Intersección:
+
+* INNER JOIN: Solo arrastra valores que estén tanto en la Tabla A como en la Tabla B.
+
+3. Unión y Diferencia Simétrica__
+* UNION: Trae todo de la tabla A y Tabla B. (Unión)
+* OUTER JOIN: Trae todo de la tabla A y B; pero solo información que no guarde relación una tabla con la otra. (Diferencia Simétrica)
