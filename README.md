@@ -678,3 +678,16 @@ En una base de datos no relacional basada en documentos el formato de los docume
 * Colecciones: las colecciones son similares a las tablas estos almacenan o agrupan los documentos
 * Documentos: los documentos son generalmente la información que se quiere guardar, se guarda en un formato similar a JSON. Dentro de los documentos contienen datos y los tipos de datos varían.
 
+## ¿Qué son y cuáles son los tipos de bases de datos no relacionales?
+
+Respecto a las bases de datos no relacionales, no existe un solo tipo, aunque se engloben en una sola categoría.
+
+Tipos de bases de datos no relacionales:
+
+* Clave - valor: Son ideales para almacenar y extraer datos con una clave única. Manejan los diccionarios de manera excepcional. Ejemplos: DynamoDB, Cassandra.
+* Basadas en documentos: Son una implementación de clave valor que varía en la forma semiestructurada en que se trata la información. Ideal para almacenar datos JSON y XML. Ejemplos: MongoDB, Firestore.
+* Basadas en grafos: Basadas en teoría de grafos, sirven para entidades que se encuentran interconectadas por múltiples relaciones. Ideales para almacenar relaciones complejas. Ejemplos: neo4j, TITAN.
+* En memoria: Pueden ser de estructura variada, pero su ventaja radica en la velocidad, ya que al vivir en memoria la extracción de datos es casi inmediata. Ejemplos: Memcached, Redis.
+* Optimizadas para búsquedas: Pueden ser de diversas estructuras, su ventaja radica en que se pueden hacer queries y búsquedas complejas de manera sencilla. Ejemplos: BigQuery, Elasticsearch.
+
+<img width="518" alt="bd" src="https://user-images.githubusercontent.com/87950040/201563028-588e7396-f544-4856-8a0a-ff88cdc819ed.png">
