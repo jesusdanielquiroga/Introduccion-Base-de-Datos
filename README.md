@@ -528,3 +528,26 @@ FROM	usuarios
 	RIGHT JOIN posts on usuarios.id = posts.usuario_id
 WHERE	posts.usuario_id IS NULL;
 ```
+## WHERE
+
+Nos ayuda a filtrar registros (filas de la tabla). Podemos filtrar por ejemplo, a partir de cierto numero de ID (con el operador de mayor o menor).
+```sh
+SELECT	*
+FROM		posts
+WHERE	id	< 50;
+```
+**LIKE**: cuando no conocemos la cadena exacta. Podemos filtrar segun alguna caracteristica. Por ejemplo:
+WHERE titulo LIKE ‘%escandalo%’ lo que hace es buscar aquellos titulos que tengan la palabra escandalo en alguna parte. Sin embargo, como los signos porcentuales indican que hay algo mas, si quitamos, por ejemplo, el del final (quedando ‘%escandalo’), estaremos buscando aquellos titulos que terminen con la palabra ‘escandalo’, ya que indicamos que despues de esta palabra no hay nada mas.
+```sh
+SELECT	*
+FROM		posts
+WHERE	titulo LIKE '%escandalo%';
+```
+**BETWEEN**: la traduccion de esta palabra al español es ‘entre’. Por lo tanto, como podemos imaginar, filtrara entre dos valores a designar. Por ejemplo:
+WHERE fechaDePublicacion BETWEEN ‘2019-01-01’ AND ‘2019-01-10’ filtrara las publicaciones con fecha de publicacion entre el 1 de enero de 2019 y 10 de enero de 2019. Puede utilizarse tambien con valores numericos (y por lo tanto, por ejemplo, con los IDs).
+
+```sh
+SELECT	*
+FROM		posts
+WHERE	fecha_publicacion BETWEEN '2023-01-01' AND '2025-12-31';
+```
