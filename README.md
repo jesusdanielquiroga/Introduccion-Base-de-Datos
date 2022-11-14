@@ -43,6 +43,8 @@
 
 * [Estructura básica de un query](#estructura-básica-de-un-query)
 
+* [Base de datos no relacional](#base-de-datos-no-relacional)
+
 # Introducción
 
 El objetivo principal de las bases de datos es el de unificar los datos que se manejan y los programas o aplicaciones que los manejan. Anteriormente los programas se codificaban junto con los datos, es decir, se diseñaban para la aplicación concreta que los iba a manejar, lo que desembocaba en una dependencia de los programas respecto a los datos, ya que la estructura de los ficheros va incluida dentro del programa, y cualquier cambio en la estructura del fichero provocaba modificar y
@@ -658,3 +660,21 @@ From posts
     Inner Join etiquetas on etiquetas.Id = posts_etiquetas.Etiquetas_Id
 Group By posts.Id;
 ```
+
+# Base de datos no relacional
+
+## Servicio administrados y jerarquía de datos
+
+Firebase es un servicio de Google donde puedes tercerizar muchos elementos en la nube. 
+
+Cloud Firestore es una base de datos flexible y escalable para la programación en servidores, dispositivos móviles y la Web desde Firebase y Google Cloud Platform.
+En una base de datos no relacional basada en documentos el formato de los documentos es BJSON, que es similar a JSON
+
+**Jerarquía de datos:**
+
+<img width="286" alt="firebase" src="https://user-images.githubusercontent.com/87950040/201562017-02c7b51d-49d6-448e-9bdd-509a847d2817.png">
+
+* Base de datos: El punto inicial es la BD que va a contener toda la información que se van a guardar ahí así como las BD relacionales
+* Colecciones: las colecciones son similares a las tablas estos almacenan o agrupan los documentos
+* Documentos: los documentos son generalmente la información que se quiere guardar, se guarda en un formato similar a JSON. Dentro de los documentos contienen datos y los tipos de datos varían.
+
