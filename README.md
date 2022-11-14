@@ -691,3 +691,35 @@ Tipos de bases de datos no relacionales:
 * Optimizadas para búsquedas: Pueden ser de diversas estructuras, su ventaja radica en que se pueden hacer queries y búsquedas complejas de manera sencilla. Ejemplos: BigQuery, Elasticsearch.
 
 <img width="518" alt="bd" src="https://user-images.githubusercontent.com/87950040/201563028-588e7396-f544-4856-8a0a-ff88cdc819ed.png">
+
+## Top level collection con Firebase
+
+El modelo de bases de datos no relacionales es un poco más cercano al mundo real en su comportamiento.
+
+* Las **top level collections** son las colecciones que se tienen de inmediato o entrada en el proyecto.
+* <a href="https://firebase.google.com/">Firebase</a> es un servicio que tiene múltiples opciones y está pensado principalmente para aplicaciones móviles y web.
+
+## Crear un proyecto con Firebase
+
+<img width="359" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201565218-96b005b1-a3c0-4a2d-a6c3-442da74f29e1.png">
+
+<img width="451" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201565352-2a85a893-97ed-485e-93ae-e90e4b8974ea.png">
+
+<img width="479" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201565665-699fa753-27ba-4b7a-bdd5-aadd875ab4d0.png">
+
+<img width="461" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201565878-d6d7030e-7c5c-42fb-96f2-f7e85881872a.png">
+
+<img width="470" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201566200-34a28968-467f-4533-b10e-ee5c51887b2c.png">
+
+<img width="461" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201566394-d4666383-a64c-46c6-87ad-2f61028e862f.png">
+
+<img width="303" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201567209-5c1c1b0f-2cd3-40ff-ac43-ba29f838594a.png">
+
+<img width="476" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201567305-ece00c5e-9bfd-4e65-b3c2-a8795978e0d3.png">
+
+<img width="464" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201567400-684c2d28-0499-4577-b007-124d82a4a2b7.png">
+
+<img width="461" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201567469-d3ddbce9-b807-4b59-9c66-da4eed299c68.png">
+
+<img width="468" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201567582-b40371b7-840d-4b7f-b1d7-81e2a9072af3.png">
+
