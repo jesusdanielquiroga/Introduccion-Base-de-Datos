@@ -612,4 +612,7 @@ FROM (
 GROUP BY new_table_projection.date 
 ORDER BY new_table_projection.date;
 ```
+**¿Cuándo ocupar los Nested queries?**
 
+* Cuando tienes un problema que no se puede solucionar simplemente consultando una tabla, o que tiene algunas condiciones que no te permiten obtener los datos que necesitas.
+* Se debe tener cuidado utilizando los Nested Queries sin tener en cuenta la escalabilidad de estos. También, se puede caer en un Producto Cartesiano, es decir, se esta haciendo una multiplicación de los registros que estas obteniendo.
