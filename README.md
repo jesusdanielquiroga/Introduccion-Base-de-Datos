@@ -551,3 +551,20 @@ SELECT	*
 FROM		posts
 WHERE	fecha_publicacion BETWEEN '2023-01-01' AND '2025-12-31';
 ```
+
+## GROUP BY
+
+La instruccion GROUP BY, agrupa las filas que tienen los mismos valores en filas de resumen, como por ejemplo saber cuantas personas han comprado un producto.
+El GROUP BY se utiliza a menudo con funciones de agregado (COUNT(), MAX(), MIN(), SUM(), AVG())
+
+```sh
+SELECT nombre_columna(s)
+FROM nombre_tabla(s)
+WHERE condicion
+GROUP BY nombre_columna(s)
+```
+```sh
+SELECT	estatus, MONTHNAME(fecha_publicacion) AS post_date, COUNT(*) AS post_number
+FROM		posts
+GROUP BY estatus, post_date;
+```
