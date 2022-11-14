@@ -723,3 +723,15 @@ El modelo de bases de datos no relacionales es un poco más cercano al mundo rea
 
 <img width="468" alt="firebase2" src="https://user-images.githubusercontent.com/87950040/201567582-b40371b7-840d-4b7f-b1d7-81e2a9072af3.png">
 
+## Tipo de datos en Firestore
+
+* String: Cualquier tipo de valor alfanumérico
+* Number: Soporta enteros y flotantes.
+* Boolenan: Los clásicos valores True y False
+* Map: Permite agregar un documento dentro de otro.
+* Array: Permite agregar un conjunto de datos (soporte multi type) sin nombre e identificador.
+* Null: Indica que no se ha definido un valor.
+* Timestamp: Permite almacenar fechas (guarda el año, mes, día y hora).
+* Geopoint: Guarda una localización geográfica (coordenadas latitud-longitud).
+* Reference: Permite referencia un documento (relaciona dos documentos, no importa su colección).
+
