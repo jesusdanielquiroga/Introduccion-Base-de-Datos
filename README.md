@@ -616,3 +616,45 @@ ORDER BY new_table_projection.date;
 
 * Cuando tienes un problema que no se puede solucionar simplemente consultando una tabla, o que tiene algunas condiciones que no te permiten obtener los datos que necesitas.
 * Se debe tener cuidado utilizando los Nested Queries sin tener en cuenta la escalabilidad de estos. También, se puede caer en un Producto Cartesiano, es decir, se esta haciendo una multiplicación de los registros que estas obteniendo.
+
+## CASE
+
+La función CASE permite agregar un campo virtual con información generada a partir de condiciones múltiples.
+Ejemplor, mostrar el idioma, precio de todos los libros, así como agregar una columna de informe que indique si el libro es caro, módico o barato basado en el precio.
+```
+SELECT  idioma, precio, 
+CASE
+	WHEN precio > 1000 THEN "Muy caro"
+	WHEN precio > 500 THEN "Precio módico"
+	ELSE "Muy barato"
+END AS "informe"
+FROM libros;
+```
+## De pregunta a Query
+
+* SELECT: Lo que quieres mostrar
+* FROM: De dónde voy a tomar los datos
+* WHERE: Los filtros de los datos que quieres mostrar
+* GROUP BY: Los rubros por los que me interesa agrupar la información
+* ORDER BY: El orden en que quiero presentar mi información
+* HAVING: Los filtros que quiero que mis datos agrupados tengan
+
+## GROUP_CONCAT
+
+Sirve para concatenar todos los registros afectados por un GROUP BY en un solo campo.
+
+**Criterios:**
+
+* DISTINCT. Evita duplicidad en los valores.
+* ORDER BY. Sirve para decidir el orden de concatenación del campo.
+* SEPARATOR. Es el separador a utilizar para separar los valores (por defecto, el separador es una coma “,”).
+
+```sh
+Select posts.Titulo, Group_Concat(Distinct etiquetas.Nombre_Etiqueta 
+			          Order By etiquetas.Nombre_Etiqueta 
+				  Separator ' - ') As Nom_Etiqueta
+From posts
+    Inner Join posts_etiquetas On posts.Id = posts_etiquetas.Posts_Id
+    Inner Join etiquetas on etiquetas.Id = posts_etiquetas.Etiquetas_Id
+Group By posts.Id;
+```
