@@ -568,3 +568,30 @@ SELECT	estatus, MONTHNAME(fecha_publicacion) AS post_date, COUNT(*) AS post_numb
 FROM		posts
 GROUP BY estatus, post_date;
 ```
+
+## ORDER BY
+
+Va a ordenar la consulta en el orden que se determine, puedes utilizar como herramientas:
+
+* <>** para determinar que los datos serán discriminados de mayor o menor que.
+* ASC para indicar si el orden según la discriminación sera ascendente.
+* DESC para indicar si el orden según la discriminación sera descendente.
+* LIMIT esta herramienta nos indicara segun el valor que le asignemos, que datos nos datos nos arrojara dentro de esas especificaciones.
+
+```sh
+SELECT	*
+FROM		posts
+ORDER BY fecha_publicacion ASC;
+```
+
+## HAVING 
+
+Tiene una similitud muy grande con WHERE, sin embargo el uso de ellos depende del orden. El filtro como WHERE lo utilizaremos cuando queremos hacer una selección de tuplas; pero si lo que queremos es selecicionar una selección de tuplas agrupados, el mismo no puede ir antes de la agrupación. Cuando se quiere seleccionar tuplas agrupadas únicamente se puede hacer con HAVING.
+
+```sh
+SELECT	MONTHNAME(fecha_publicacion) AS post_month, estatus, COUNT(*) AS post_quantity
+FROM		posts
+GROUP BY estatus, post_month
+HAVING post_quantity > 1
+ORDER BY post_month;
+```
