@@ -595,3 +595,21 @@ GROUP BY estatus, post_month
 HAVING post_quantity > 1
 ORDER BY post_month;
 ```
+## NESTED QUERY
+
+Los Nested queries significan que dentro de un query podemos hacer otro query. Esto sirve para hacer join de tablas, estando una en memoria. También teniendo un query como condicional del otro.
+
+Este proceso puede ser tan profundo como quieras, teniendo infinitos queries anidados.
+Se le conoce como un producto cartesiano ya que se multiplican todos los registros de una tabla con todos los del nuevo query. Esto provoca que el query sea difícil de procesar por lo pesado que puede resultar.
+
+```sh
+SELECT new_table_projection.date, COUNT(*) AS posts_count
+FROM (
+    SELECT DATE(MIN(fecha_publicacion)) AS date, YEAR(fecha_publicacion) AS post_year
+    FROM posts
+    GROUP BY post_year
+) AS new_table_projection
+GROUP BY new_table_projection.date 
+ORDER BY new_table_projection.date;
+```
+
