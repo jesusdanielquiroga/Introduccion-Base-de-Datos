@@ -471,14 +471,60 @@ Esta sentencia esta relacionada con la Teoría de Conjuntos, donde se utilizan l
 
 1. Diferencia:
 * LEFT Join (Con la intersección): Trae todo los datos de la tabla A, que estén o no estén de la tabla B.
+```sh
+SELECT	*
+FROM	usuarios 
+	LEFT JOIN posts on usuarios.id = posts.usuario_id;
+```
 * LEFT JOIN (Sin la intersección): Trae todo los datos de la tabla A, que no estén en la tabla B.
-* RRIGHT JOIN(Con la intersección): Trae todo los datos de la tabla B, que estén o no estén de la tabla A.
+```sh
+SELECT	*
+FROM	usuarios 
+	LEFT JOIN posts on usuarios.id = posts.usuario_id
+WHERE	posts.usuario_id IS NULL;
+```
+* RIGHT JOIN(Con la intersección): Trae todo los datos de la tabla B, que estén o no estén de la tabla A.
+```sh
+SELECT	*
+FROM	usuarios 
+	RIGHT JOIN posts on usuarios.id = posts.usuario_id;
+```
 * RIGHT JOIN(Sin la intersección):Trae todo los datos de la tabla B, que no estén en la tabla A.
+```sh
+SELECT	*
+FROM	usuarios 
+	RIGHT JOIN posts on usuarios.id = posts.usuario_id
+WHERE	posts.usuario_id IS NULL;
+```
 
 2. Intersección:
 
 * INNER JOIN: Solo arrastra valores que estén tanto en la Tabla A como en la Tabla B.
-
+```sh
+SELECT	*
+FROM	usuarios 
+	INNER JOIN posts on usuarios.id = posts.usuario_id;
+```
 3. Unión y Diferencia Simétrica__
 * UNION: Trae todo de la tabla A y Tabla B. (Unión)
+```sh
+SELECT	*
+FROM		usuarios 
+	LEFT JOIN posts   ON usuarios.id = posts.usuario_id
+UNION 
+SELECT	*
+FROM		usuarios 
+	RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+```
 * OUTER JOIN: Trae todo de la tabla A y B; pero solo información que no guarde relación una tabla con la otra. (Diferencia Simétrica)
+```sh
+SELECT	*
+FROM	usuarios 
+	LEFT JOIN posts on usuarios.id = posts.usuario_id
+WHERE	posts.usuario_id IS NULL
+UNION
+SELECT	*
+FROM	usuarios 
+	RIGHT JOIN posts on usuarios.id = posts.usuario_id
+WHERE	posts.usuario_id IS NULL;
+```
