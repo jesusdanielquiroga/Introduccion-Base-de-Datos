@@ -1,9 +1,9 @@
  <p align="left">
    <img src="https://img.shields.io/badge/status-en%20desarrollo-green"> 
-   <img src="https://img.shields.io/github/issues/jesusdanielquiroga/model-api">
-   <img src="https://img.shields.io/github/forks/jesusdanielquiroga/model-api">
-   <img src="https://img.shields.io/github/forks/jesusdanielquiroga/model-api">
-   <img src="https://img.shields.io/github/license/jesusdanielquiroga/model-api">
+   <img src="https://img.shields.io/github/issues/jesusdanielquiroga/introduccion-base-de-datos">
+   <img src="https://img.shields.io/github/forks/jesusdanielquiroga/introduccion-base-de-datos">
+   <img src="https://img.shields.io/github/forks/jesusdanielquiroga/introduccion-base-de-datos">
+   <img src="https://img.shields.io/github/license/jesusdanielquiroga/introduccion-base-de-datos">
 <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjesusdanielquiroga%2FIntroduccion-Base-de-Datos"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjdquiroga2410"></a>
    <img src="https://img.shields.io/github/stars/camilafernanda?style=social">
    <img src="https://img.shields.io/badge/topic-basededatos-green">
